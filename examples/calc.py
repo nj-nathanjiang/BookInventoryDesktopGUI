@@ -1,3 +1,5 @@
+# My Calculator
+
 from tkinter import *
 
 window = Tk()
