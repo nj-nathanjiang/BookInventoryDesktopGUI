@@ -1,4 +1,5 @@
 from tkinter import *
+import backend
 
 window = Tk()
 
@@ -11,6 +12,9 @@ l2.grid(column=2, row=0)
 l3 = Label(window, text="Year")
 l3.grid(column=0, row=1)
 
+l4 = Label(window, text="Rating")
+l4.grid(column=2, row=1)
+
 title_entry = StringVar()
 e1 = Entry(window, textvariable=title_entry)
 e1.grid(column=1, row=0)
@@ -22,6 +26,10 @@ e2.grid(column=3, row=0)
 year_entry = StringVar()
 e3 = Entry(window, textvariable=year_entry)
 e3.grid(column=1, row=1)
+
+rating_entry = StringVar()
+e4 = Entry(window, textvariable=rating_entry)
+e4.grid(column=3, row=1)
 
 list1 = Listbox(window, height=6, width=35)
 list1.grid(column=0, row=2, rowspan=6, columnspan=2)
@@ -41,10 +49,10 @@ b2.grid(column=3, row=3)
 b3 = Button(window, text="Add entry", width=12)
 b3.grid(column=3, row=4)
 
-b4 = Button(window, text="Update", width=12)
+b4 = Button(window, text="Update Entry", width=12)
 b4.grid(column=3, row=5)
 
-b5 = Button(window, text="Delete", width=12)
+b5 = Button(window, text="Delete Entry", width=12)
 b5.grid(column=3, row=6)
 
 b6 = Button(window, text="Close", width=12)
