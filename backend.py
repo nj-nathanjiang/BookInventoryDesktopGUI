@@ -40,7 +40,7 @@ def view():
 def search(title="", author="", year="", rating=""):
     conn = sqlite3.connect("books.db")
     cur = conn.cursor()
-    cur.execute("SELECT * FROM book WHERE title=? OR author=? OR rating=?",
+    cur.execute("SELECT * FROM book WHERE title=? OR author=? OR year=? OR rating=?",
                 (title, author, year, rating))
     rows = cur.fetchall()
     conn.close()
